@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>office_emp_project</title>
+</head>
+<body>
+    <div class=container>
+        <h1>View All Employee </h1>
+        <hr>
+        <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">First name</th>
+                <th scope="col">Last name</th>
+                <th scope="col">salary</th>
+                <th scope="col">location</th>
+                <th scope="col">bonous</th>
+                <th scope="col">hire date</th>
+                <th scope="col">department</th>
+                <th scope="col">role</th>
+                <th scope="col">phn no</th>
+              </tr>
+            </thead>
+            {% for emp in emps%}
+            <tbody>
+              <tr>
+                <th scope="row">{{emp.id}}</th>
+                <td>{{emp.f_name}}</td>
+                <td>{{emp.l_name}}</td>
+                <td>{{emp.salary}}</td>
+                <td>{{emp.location}}</td>
+                <td>{{emp.bonous}}</td>
+                <td>{{emp.hire_date}}</td>
+                <td>{{emp.dept.name}}</td>
+                <td>{{emp.role.name}}</td>
+                <td>{{emp.phn_no}}</td>
+              </tr>
+              
+            </tbody>
+            {% endfor %}
+          </table>
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>office_emp_project</title>
+</head>
+<body>
+    <div class=container>
+        <h1>Filter Employee</h1>
+        <hr>
+        <form action="/filter/" method='post'>
+            {% csrf_token %}
+            <label for="name">frist/last name</label><BR>
+            <input type='text' id='name' name='name' value="{{name}}"><br>
+            {% comment %} <label for="l_name">last name</label><BR>
+            <input type='text' id='l_name' name='l_name' value="{{l_name}}"><br>
+            <label for="salary">salary</label><BR>
+            <input type='number' id='salary' name='salary' value="{{salary}}"><br> {% endcomment %}
+            <label for="dept">dept</label><BR>
+            <input type='text' id='dept' name='dept' value="{{dept}}"><br>
+            <label for="role">role</label><BR>
+            <input type='text' id='role' name='role' value="{{role}}"><br>
+            {% comment %} <label for="bonous">bonous</label><BR>
+            <input type='number' id='bonous' name='bonous' value="{{bonous}}"><br>
+            <label for="phn_no">phone number</label><BR>
+            <input type='number' id='phn_no' name='phn_no' value="{{phn_no}}"><br> {% endcomment %}
+            <hr>
+            <button type='submit' class='btn btn-primary'>SUBMIT</button>
+        </form>
+    </div>

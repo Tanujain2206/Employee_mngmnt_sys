@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>office_emp_project</title>
+</head>
+<body>
+    <div class=container>
+        <h1>Remove Employee</h1>
+        <hr>
+        <div class="dropdown">
+            <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Choose emp id
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+               {% for emp in emps %}
+              <a class="dropdown-item" href="/remove/{{emp.id}}">{{emp.f_name}}</a>
+               {% endfor %}
+            </div>
+          </div>
+    </div>
+    
+</body>
+</html>

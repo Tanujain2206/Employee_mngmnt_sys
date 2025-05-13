@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>office_emp_project</title>
+    <link rel="stylesheet" href="{% static 'Employee/css/boootstrap.css' %}">
+</head>
+<body>
+    <div class=container>
+        <h1>Office Employee Management</h1>
+        <hr>
+        <a class="btn btn-primary" href='/view_emp' role='button'>View All Employee</a>
+        <a class="btn btn-primary" href='/add_emp' role='button'>Add An Employee</a>
+        <a class="btn btn-primary" href='/remove' role='button'>Remove An Employee</a>
+        <a class="btn btn-primary" href='/filter' role='button'>Filter An Employee</a>
+    </div>
+    <script src='{% static 'enroll/js/bootstrap.js' %}'></script>    
+</body>
+</html>
